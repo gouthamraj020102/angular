@@ -1,5 +1,5 @@
 <div class="container">
-  <div>
-    {{ items[0].wishText }}
+  <div *ngFor="let item of items"> <!-- javascript expression -->
+    {{ item.wishText }}
   </div>
 </div>

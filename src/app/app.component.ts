@@ -14,3 +14,9 @@ export class AppComponent {
   ];
   title = 'angular';
 }
+
+// Traditional for loop
+// for(APP_INITIALIZER; Conditional; iteration)
+
+// Javascript for of loop primarily used for iterable objects
+// for (let item of items)
