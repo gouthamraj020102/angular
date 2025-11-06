@@ -11,13 +11,14 @@
 
   <ng-template #showItems>
     <ul class="wish-list">
-      <li *ngFor="let item of items">
+      <li *ngFor="let item of items; index as ii">
         <div class="form-check">
           <label class="form-check-label">
             <input
               type="checkbox"
               class="checkbox"
-              checked = "false"
+              [checked]="item.isComplete"
+              [attr.data-index]="ii"
               > {{ item.wishText }}
           </label>
         </div>
