@@ -7,17 +7,11 @@ import { WishItem } from '../shared/models/wishItem';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // items : any = [  // JavaScript approach
-  items : WishItem[] = [
-    // new WishItem('Learn Angular'),
-    // new WishItem('Get Coffee', true),
-    // new WishItem('Find grass that cuts itself')
-  ];
+  item = new WishItem('Learn Angular');
   title = 'angular';
+  constructor() {
+    setTimeout(() => {
+      this.title = "Angular"
+    }, 1000);
+  }
 }
-
-// Traditional for loop
-// for(APP_INITIALIZER; Conditional; iteration)
-
-// Javascript for of loop primarily used for iterable objects
-// for (let item of items)
