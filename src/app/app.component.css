@@ -1,3 +1,7 @@
 .wish-list {
     list-style: none;
 }
+.selected {
+    background-color: lightblue;
+    font-weight: bold;
+}

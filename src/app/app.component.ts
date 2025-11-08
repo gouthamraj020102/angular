@@ -7,7 +7,7 @@ import { WishItem } from '../shared/models/wishItem';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  item = new WishItem('Learn Angular');
+  item = new WishItem('Learn Angular', true);
   items : WishItem[] = [
     new WishItem('Learn Angular'),
     new WishItem('Get Coffee', true),

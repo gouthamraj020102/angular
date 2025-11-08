@@ -14,3 +14,7 @@
   <p *ngSwitchCase="'viewer'">Hi, Viewer!</p>
   <p *ngSwitchDefault>Unknown role</p>
 </div>
+
+<ul>
+  <li [ngClass]="{'selected': item.isComplete}">{{ item.wishText }}</li>
+</ul>
