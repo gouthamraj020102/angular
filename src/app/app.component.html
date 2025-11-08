@@ -1,4 +1,4 @@
-<div style="text-align: center">
+<div *ngIf="isLoggedIn" style="text-align: center">
   <h1 style="color: red;">{{title}}</h1>
   <h2 style="color: blue;">{{item.wishText}}</h2>
   <h3 style="color: yellowgreen;">{{item.isComplete}}</h3>

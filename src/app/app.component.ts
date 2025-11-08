@@ -14,6 +14,7 @@ export class AppComponent {
     new WishItem('Find grass that cuts itself')
   ];
   title = 'angular';
+  isLoggedIn = false;
   constructor() {
     setTimeout(() => {
       this.title = "Angular"
