@@ -1,27 +1,25 @@
-<div style="text-align: center">
+<div *ngIf="isLoggedIn" style="text-align: center">
   <h1 style="color: red;">{{title}}</h1>
   <h2 style="color: blue;">{{item.wishText}}</h2>
   <h3 style="color: yellowgreen;">{{item.isComplete}}</h3>
 </div>
 
-<div class="container">
-  <div *ngIf="items.length===0; else showItems">
-    There are no wishes to display.
-  </div>
+<ol>
+  <li *ngFor="let item of items">{{ item.wishText }}</li>
+</ol>
 
-  <ng-template #showItems>
-    <ul class="wish-list">
-      <li *ngFor="let item of items; index as ii">
-        <div class="form-check">
-          <label class="form-check-label">
-            <input
-              type="checkbox"
-              class="checkbox"
-              [checked]="item.isComplete"
-              [attr.data-index]="ii"
-              > {{ item.wishText }}
-          </label>
-        </div>
-      </li>
-    </ul>
-  </ng-template>
+<div [ngSwitch]="userRole">
+  <p *ngSwitchCase="'admin'">Welcome, Admin!</p>
+  <p *ngSwitchCase="'editor'">Hello, Editor!</p>
+  <p *ngSwitchCase="'viewer'">Hi, Viewer!</p>
+  <p *ngSwitchDefault>Unknown role</p>
+</div>
+
+<h5 [ngClass]="{'selected': item.isComplete}">{{ item.wishText }}</h5>
+
+<p [ngStyle]="{ 'color': textColor, 'font-size': fontSize + 'px' }">
+  Directives
+</p>
+
+<input [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello, {{ username }}</p>
