@@ -7,3 +7,10 @@
 <ol>
   <li *ngFor="let item of items">{{ item.wishText }}</li>
 </ol>
+
+<div [ngSwitch]="userRole">
+  <p *ngSwitchCase="'admin'">Welcome, Admin!</p>
+  <p *ngSwitchCase="'editor'">Hello, Editor!</p>
+  <p *ngSwitchCase="'viewer'">Hi, Viewer!</p>
+  <p *ngSwitchDefault>Unknown role</p>
+</div>

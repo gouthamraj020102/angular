@@ -15,6 +15,7 @@ export class AppComponent {
   ];
   title = 'angular';
   isLoggedIn = false;
+  userRole = 'admin';
   constructor() {
     setTimeout(() => {
       this.title = "Angular"
