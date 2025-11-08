@@ -18,6 +18,7 @@ export class AppComponent {
   userRole = 'admin';
   textColor = 'brown';
   fontSize = 50;
+  username = '';
   constructor() {
     setTimeout(() => {
       this.title = "Angular"

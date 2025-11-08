@@ -15,10 +15,11 @@
   <p *ngSwitchDefault>Unknown role</p>
 </div>
 
-<ul>
-  <li [ngClass]="{'selected': item.isComplete}">{{ item.wishText }}</li>
-</ul>
+<h5 [ngClass]="{'selected': item.isComplete}">{{ item.wishText }}</h5>
 
 <p [ngStyle]="{ 'color': textColor, 'font-size': fontSize + 'px' }">
   Directives
 </p>
+
+<input [(ngModel)]="username" placeholder="Enter your name">
+<p>Hello, {{ username }}</p>
