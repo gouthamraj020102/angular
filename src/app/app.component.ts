@@ -24,7 +24,9 @@ export class AppComponent {
       this.title = "Angular"
     }, 1000);
   }
+  count = 0;
   toggleItem(e : any) {
+    this.count++;
     console.log(e);
   }
 }
