@@ -24,7 +24,7 @@ export class AppComponent {
       this.title = "Angular"
     }, 1000);
   }
-  toggleItem() {
-    console.log('clicked!');
+  toggleItem(e : any) {
+    console.log(e);
   }
 }
