@@ -15,6 +15,14 @@ export class AppComponent {
     new WishItem('Get Coffee', true),
     new WishItem('Find grass that cuts itself')
   ];
+
+  newWishText = '';
+
+  addNewWish() {
+    this.items.push(new WishItem(this.newWishText));
+    this.newWishText = '';
+  }
+
   title = 'angular';
   isLoggedIn = false;
   userRole = 'admin';
